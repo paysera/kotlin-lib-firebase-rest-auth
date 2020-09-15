@@ -1,6 +1,5 @@
 package com.paysera.lib.firebaserestauth.utils
 
-import android.text.TextUtils
 import com.google.android.gms.common.util.Base64Utils
 import com.google.firebase.FirebaseException
 import org.json.JSONArray
@@ -28,9 +27,7 @@ object IdTokenParser {
     }
 
     private fun parseRawUserInfo(rawUserInfo: String): Map<String, Any>? {
-        if (TextUtils.isEmpty(rawUserInfo)) {
-            return null
-        }
+        if (rawUserInfo.isNullOrEmpty()) return null
 
         try {
             val jsonObject = JSONObject(rawUserInfo)
