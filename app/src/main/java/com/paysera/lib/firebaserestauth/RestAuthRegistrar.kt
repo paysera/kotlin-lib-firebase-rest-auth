@@ -1,6 +1,5 @@
 package com.paysera.lib.firebaserestauth
 
-import androidx.annotation.Keep
 import com.google.firebase.FirebaseApp
 import com.google.firebase.auth.internal.InternalAuthProvider
 import com.google.firebase.components.Component
@@ -8,7 +7,6 @@ import com.google.firebase.components.ComponentRegistrar
 import com.google.firebase.components.Dependency
 import com.paysera.lib.firebaserestauth.auth.FirebaseRestAuth
 
-@Keep
 class RestAuthRegistrar : ComponentRegistrar {
 
     override fun getComponents(): MutableList<Component<*>> {
